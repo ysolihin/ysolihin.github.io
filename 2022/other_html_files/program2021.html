@@ -1,0 +1,614 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head><meta charset="utf-8"><meta http-equiv="Content-Language" content="en-us">
+	<title>SEED 2022 Program</title>
+	<base target="_top" />
+	<style type="text/css">.inner-wrapper{
+            margin-left: 50%;
+            width: 1150px;
+        }
+        .inner-wrapper img:nth-child(1){
+            margin-left: -50%;
+        } 
+        .inner-wrapper img{
+        margin-left: 5px;
+      } 
+      table{
+        text-align: center;
+      }
+      .program-table {
+          width: 90%;
+          border-collapse: collapse;
+          border: 1px solid #ccc;
+          font-size: 14px;
+      }
+      .program-table tr{
+        border-bottom: 1px solid #ccc;
+      }
+      .program-table tr td{
+        border-left: 1px solid #ccc;
+      }
+      .program-table tr:nth-child(odd){
+        background-color: #ebebeb;
+      }
+      .program-table tr:nth-child(even){
+        background-color: #ffffff;
+      }
+      .program-table tr td, .program-table tr th{
+        padding: 10px 10px;
+      }
+      .program-table tr a{
+        color: black;
+      }
+      .sub-row{
+        padding: 5px 0;
+      }
+
+      .session-content{
+        text-align: justify;
+      }
+      .session-heading{
+        text-align: justify;
+        font-weight: bold !important;
+        background-color: inherit;
+        font-size: 14px;
+      }
+      .session-big-heading{
+        text-align: justify;
+        font-weight: bold !important;
+        background-color: inherit;
+        font-size: 17px;
+      }
+      .session-person {
+        width: 100%;
+        text-align: justify;
+        background-color: inherit;
+        font-size: 14px;
+      }
+      .session-abstract{
+        margin-top: 5px;
+        width: 100%;
+        text-align: justify;
+        background-color: inherit;
+        font-size: 14px;
+        color: #333;
+      }
+      .session-abstract:before{
+        content:"Abstract: ";
+        font-weight: bold;
+        font-size: 14px;
+      }
+      .session-bio{
+        margin-top: 5px;
+        width: 100%;
+        text-align: justify;
+        background-color: inherit;
+        font-size: 14px;
+        color: #333;
+      }
+      .session-bio:before{
+        content:"Bio: ";
+        font-weight: bold;
+        font-size: 14px;
+      }
+      .detail-link{
+        text-decoration: none;
+        color: #000;
+      }
+      .detail-link:hover{
+        text-decoration: underline;
+      }
+      .session-chairs, .session-chair{
+        text-align: left;
+        margin-top: 5px;
+        padding-left: 8.25em;
+        text-indent: -7.75em;
+      }
+      .session-chairs::before{
+        content: "Session Chair: ";
+        font-style: italic;
+        font-size: 15px;
+      }
+      .session-chair::before{
+        content: "Session Chair: ";
+        font-style: italic;
+        font-size: 15px;
+      }
+      .session-link{
+        text-align: left;
+        margin-top: 5px;
+
+      }
+      .program-table tr .session-link a{
+        color: #330099;
+        text-decoration: none;
+        cursor: pointer;
+      }
+      .program-table tr .session-link a:hover{
+        text-decoration: underline;
+      }
+      .program-table tr .session-link .video-link{
+        background: url(video_icon.png) no-repeat left;
+        background-size: 20px 20px;
+        padding-left: 24px;
+        margin-right: 10px;
+      }
+      .program-table tr .session-link .paper-link{
+        background: url(paper_icon.png) no-repeat left;
+        background-size: 20px 20px;
+        padding-left: 24px;
+        margin-right: 10px;
+      }
+	</style>
+	<script src="https://cdn.bootcss.com/crypto-js/3.1.9-1/crypto-js.min.js"></script><script>
+  function getCookieByString(cookieName){
+    var start = document.cookie.indexOf(cookieName+'=');
+    if (start == -1) return false;
+    start = start+cookieName.length+1;
+    var end = document.cookie.indexOf(';', start);
+    if (end == -1) end=document.cookie.length;
+    return document.cookie.substring(start, end); 
+  }
+  function visit_paper(ttl){
+    let pwd = '8449cc72ba66ca6d4c165da23bbecff34e894c084fda39ae473a60b78b665a96';
+    ori_pwd=getCookieByString('ori_pwd')
+    if(CryptoJS.SHA256(ori_pwd).toString(CryptoJS.enc.Hex)!==pwd){
+      input=prompt('Please input password:')
+      if (pwd !== CryptoJS.SHA256(input).toString(CryptoJS.enc.Hex)) {
+          alert('Access denied');
+          return
+      }else{
+        document.cookie = 'ori_pwd='+input;
+        ori_pwd=getCookieByString('ori_pwd')
+        window.open(CryptoJS.SHA256(pwd+ori_pwd).toString(CryptoJS.enc.Hex)+'/IISWC_'+ttl+'.pdf')
+      }
+    }else{
+      ori_pwd=getCookieByString('ori_pwd')
+      window.open(CryptoJS.SHA256(pwd+ori_pwd).toString(CryptoJS.enc.Hex)+'/IISWC_'+ttl+'.pdf')
+    }
+  }
+</script>
+</head>
+<body><script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-89368300-1', 'auto');
+  ga('send', 'pageview');
+
+    </script>
+<p align="center"><b><font color="#FFD700" face="Arial" size="5">SEED-2022</font></b></p>
+
+<p align="center"><b><font color="#000080" face="Arial" size="4">November 7 &ndash; November 9, 2021</font></b></p>
+
+<p align="center" style="margin-top: 0; margin-bottom:0"><b><font color="#808080" face="Arial" size="4">&nbsp;To be held virtually</font></b></p>
+
+<div class="warpper" style="overflow:hidden; width: 100%; height: 150px; margin-top:30px">
+<div class="inner-wrapper"><img align="middle" height="100%" src="r11.jpg" /> <img align="middle" height="100%" src="r22.jpg" /> <img align="middle" height="100%" src="r33.jpg" /></div>
+</div>
+
+<hr />
+<p style="margin-top: 0; margin-bottom: 0"></p>
+
+<p style="margin-top: 0; margin-bottom: 0"><b><span style="font-family: Arial"><font color="#000080" size="5">CONFERENCE PROGRAM</font></span></b></p>
+
+<p style="color: red; font-weight: bold;">* IISWC 2021 is a virtual program that will host technical paper sessions and keynotes live. The paper presentation times are kept short in light of the virtual nature of the program. To support effective dissemination of the publications, long recorded presentations for the 19 technical papers can be found at the following <a target="_blank" href="https://youtube.com/playlist?list=PLHJB2bhmgB7c5SAXskY_MYcCb9aWsEiXQ">IISWC 2021 YouTube Channel</a>.
+
+<p style="color: red; font-weight: bold;">* All times are in <a href="https://www.timeanddate.com/time/zones/est" target="new">EST (UTC-5)</a>. Note that daylight saving time ends on Sunday, November 7, 2021, at 2am.</p>
+
+<p style="color: red; font-weight: bold;">* All registered participants receive Zoom links to join the technical sessions via email from registration chair, Bingzhe Li <<a href="mailto:bingzhe.li@okstate.edu">bingzhe.li@okstate.edu</a>>.</p>
+
+<p style="color: red; font-weight: bold;">* Open Research Objects (ORO) <img alt="" src="Open_Research.jpg" width="25" />: This badge signals that author-created digital objects used in the research (including data and code) are permanently archived in a public repository that assigns a global identifier and guarantees persistence, and are made available via standard open licenses that maximize artifact availability.</p>
+
+<table class="program-table">
+	<tbody>
+		<tr>
+			<th class="session-big-heading" colspan="2">Sunday, November, 7, 2021 - Workshops and Tutorials</th>
+		</tr>
+		<tr>
+			<td style="width: 110px;">10am - 12pm EST</td>
+			<td class="session-content"><a class="detail-link" href="#tutorial-1" target="body"><b>Tutorial 1:&nbsp;</b></a><a href="https://rohanbasuroy.github.io/bo_tutorial_iiswc21/">Bayesian Optimization (BO) Methods for Computer Systems and Architecture Research</a>, Rohan Basu Roy, Tirthak Patel, Devesh Tiwari (Northeastern University).</td>
+		</tr>
+		<tr>
+			<td style="width: 110px;">10am - 4pm EST</td>
+			<td class="session-content"><a class="detail-link" href="#workshop-1" target="body"><b>Workshop 1:&nbsp;</b></a><a href="https://secriscv.org/">Second International Workshop on Secure RISC-V Architecture Design Exploration (SECRISC-V&#39;21)</a>, Michel A. Kinsy (Arizona State University).</td>
+		</tr>
+		<tr>
+			<td style="width: 110px;">1pm - 4pm EST</td>
+			<td class="session-content"><a class="detail-link" href="#tutorial-2" target="body"><b>Tutorial 2:&nbsp;</b></a><a href="https://sites.google.com/berkeley.edu/gemminitutorialiiswc2021/">Gemmini: Enabling Systematic Deep-Learning Architecture Evaluation via Full-Stack Integration</a>, Hasan Genc, Seah Kim, Dima Nikiforov, Krste Asanovic, Bora Nikolic, Sophia Shao (UC Berkeley).</td>
+		</tr>
+	</tbody>
+</table>
+
+<div style="height: 20px;"></div>
+
+<table class="program-table">
+	<tbody>
+		<tr>
+			<th class="session-big-heading" colspan="2">Monday, November 8, 2021</th>
+		</tr>
+		<tr>
+			<td style="width: 110px;">9:50 - 10:00 am EST</td>
+			<td class="session-content"><b>Welcome</b></td>
+		</tr>
+		<tr>
+			<td>10:00 - 10:45 am EST</td>
+			<td class="session-content"><a class="detail-link" href="#session-1" target="body"><b>Session 1: Best Paper Session</b><br />
+			Session Chair: Tim Rogers (Purdue University)</a></td>
+		</tr>
+		<tr>
+			<td>10:50 - 11:50 am EST</td>
+			<td class="session-content"><a class="detail-link" href="#keynote-1" target="body"><b>Keynote 1: Ron Perez (Intel)</b><br />
+			Session Chair: Omer Khan (University of Connecticut)</td>
+		</tr>
+		<tr>
+			<td>12:00 - 01:00 pm EST</td>
+			<td class="session-content"><a class="detail-link" href="#session-2" target="body"><b>Session 2: Clouds and Graphs</b><br />
+			Session Chair: Yiping Kang (University of Michigan)</a></td>
+		</tr>
+	</tbody>
+</table>
+
+<div style="height: 20px;"></div>
+
+<table class="program-table">
+	<tbody>
+		<tr>
+			<th class="session-big-heading" colspan="2">Tuesday, November 9, 2021</th>
+		</tr>
+		<tr>
+			<td style="width: 110px;">10:00 - 10:50 am EST</td>
+			<td class="session-content"><a class="detail-link" href="#session-3" target="body"><b>Session 3: Programming, Debugging, and Errors</b><br />
+			Session Chair:&nbsp;</a>Clayton Hughes (Sandia National Laboratories)</td>
+		</tr>
+		<tr>
+			<td>10:55 - 11:55 am EST</td>
+			<td class="session-content"><a class="detail-link" href="#keynote-2" target="body"><b>Keynote 2: Carole-Jean Wu, Facebook AI Research</b><br />
+			Session Chair:&nbsp;</a>Ravi Soundararajan (VMware)</td>
+		</tr>
+		<tr>
+			<td>12:05 - 12:55 pm EST</td>
+			<td class="session-content"><a class="detail-link" href="#session-4" target="body"><b>Session 4: GPU, and Machine Learning</b><br />
+			Session Chair:&nbsp;</a>David Kaeli (Northeastern University)</td>
+		</tr>
+		<tr>
+			<td>12:55 pm EST</td>
+			<td class="session-content"><b>Closing Remarks &amp; Awards</b></td>
+		</tr>
+	</tbody>
+</table>
+
+<p style="margin-top: 0; margin-bottom: 0"></p>
+
+<p style="margin-top: 0; margin-bottom: 0"><b><span style="font-family: Arial"><font color="#000080" size="5">Detailed Program</font></span></b></p>
+
+<p style="margin-top: 0; margin-bottom: 0"></p>
+
+<table class="program-table"><!--
+	<tbody>
+		<tr>
+			<th class="session-big-heading" colspan="2">Sunday, November, 7, 2021</th>
+		</tr>
+		<tr>
+			<td rowspan="2" style="width: 100px;"></td>
+			<td>
+			<div class="session-big-heading" id="tutorial-1">Tutorial 1: TBD</div>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<div class="session-abstract">TBD.</div>
+			</td>
+		</tr>
+		<tr>
+			<td rowspan="2"></td>
+			<td>
+			<div class="session-big-heading" id="workshop-1">Workshop 1: TBD</div>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<div class="session-content"><strong>Abstract</strong>: TBD.</div>
+			</td>
+		</tr>
+		<tr>
+			<td rowspan="2"></td>
+			<td>
+			<div class="session-big-heading" id="tutorial-2">Tutorial 2: TBD</div>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<div class="session-abstract">TBD.</div>
+			</td>
+		</tr>
+	</tbody>
+	-->
+</table>
+
+<div style="height: 20px;"></div>
+
+<table class="program-table">
+	<tbody>
+		<tr>
+			<th class="session-big-heading" colspan="2">Monday, November 8, 2021</th>
+		</tr>
+		<tr>
+			<td style="width: 100px;"><b>9:50 - 10:00 am EST</b></td>
+			<td class="session-big-heading"><b>Welcome</b></td>
+		</tr>
+		<tr>
+			<td style="width: 100px;"><b>10:00 - 10:45 am EST</b></td>
+			<td>
+			<div class="session-big-heading" id="session-1">Session 1: Best Paper Session</div>
+
+			<div class="session-chairs">Tim Rogers (Purdue University)</div>
+			</td>
+		</tr>
+		<tr>
+			<td style="width: 100px;"></td>
+			<td>
+			<div class="session-heading"><b id="docs-internal-guid-36f5c640-7fff-e418-cdfe-435e7ff75ec1">Copernicus: Characterizing the Performance Implications of Compression Formats Used in Sparse Workloads</b></div>
+
+			<div class="session-person">Bahar Asgari, Ramyad Hadidi, Joshua Dierberger, Charlotte Steinichen, Amaan Marfatia, Hyesoon Kim (Georgia Tech)</div>
+			<!-- <div class="session-link"><a class="video-link" href="video_pages/long_session1_paper1.html" target="body">video (long)</a> <a class="video-link" href="video_pages/short_session1_paper1.html" target="body">video (short)</a> <a class="paper-link" onclick="visit_paper('session1_paper1')">paper</a></div>
+			--></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>
+			<div class="session-heading">The Cost of Speculation: Revisiting Overheads in the V8 JavaScript Engine</div>
+
+			<div class="session-person">Rene Mueller (Huawei Zurich Research Center), Alberto Parravicini (Politecnico di Milano)</div>
+			<!--<div class="session-link"><a class="video-link" href="video_pages/long_session1_paper2.html" target="body">video (long)</a> <a class="video-link" href="video_pages/short_session1_paper2.html" target="body">video (short)</a> <a class="paper-link" onclick="visit_paper('session1_paper2')">paper</a></div>
+			--></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td><img align="left" alt="" src="Open_Research.jpg" width="25" />
+			<div class="session-heading">ILLIXR: Enabling End-to-End Extended Reality Research&middot;</div>
+
+			<div class="session-person">Muhammad Huzaifa, Rishi Desai, Samuel Grayson, Xutao Jiang, Ying Jing, Jae Lee, Fang Lu, Yihan Pang, Joseph Ravichandran, Finn Sinclair, Boyuan Tian, Hengzhi Yuan, Jeffrey Zhang, Sarita Adve (University of Illinois at Urbana-Champaign)</div>
+			<!-- <div class="session-link"><a class="video-link" href="video_pages/long_session1_paper3.html" target="body">video (long)</a> <a class="video-link" href="video_pages/short_session1_paper3.html" target="body">video (short)</a> <a class="paper-link" onclick="visit_paper('session1_paper3')">paper</a></div>
+			--></td>
+		</tr>
+		<tr>
+			<td rowspan="3"><b>10:50 - 11:50 am EST</b></td>
+			<td>
+			<div class="session-big-heading" id="keynote-1"><img align="left" alt="" src="Ron_Perez_01_web.jpg" width="75" /> Keynote 1: Achieving the Promise of Confidential Computing -- Ron Perez (Intel)</div>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<div class="session-chair">Omer Khan (University of Connecticut)</div>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<div class="session-abstract">The confidentiality and integrity of data are cornerstone properties of information technology security. The use of cryptography in conjunction with more traditional access control and other separation mechanisms is now wide-spread, well understood, and accepted when protecting data at rest or in motion. As we rely more and more on computing environments that we may not directly control, such as those we see today with various cloud computing models, there is heightened interest in the use of these technologies to protect data that is actively in use. This interest and related trend, which is becoming known as Confidential Computing (and several other names), has its roots in the long and rich history of computer security. I will discuss the role and ongoing evolution of hardware-based trusted execution environments – such as SGX – in achieving these goals, the progress we’ve made and the challenges we and the industry still face, all through the lens of my personal experience and what we are seeing from Intel’s cloud and data center customers and partners.</div>
+			
+			<div class="session-bio">Ron Perez is an Intel Fellow and Chief Security Architect in the Office of the CTO at Intel. He is responsible for overall Intel security architecture and cross-business unit security technology roadmap alignment, with a focus on Confidential Computing and platform security for the disaggregated, heterogeneous, and distributed data center. He leads a team of senior technology leaders driving Intel's foundational security technologies for server platforms and roots-of-trust, hierarchical memory subsystems, supply chain and life cycle integrity, and trusted execution environments in collaboration with Intel Labs and world-wide strategy, planning, engineering, design, and validation teams. An industry veteran, Ron joined Intel in 2017 with a breadth of experience spanning security, semiconductors, and cloud computing. Most recently, he was Vice President of Security Research at Visa Inc., and has held roles as Fellow and Chief Technology Officer in the Cryptography Research Division of Rambus Inc., Senior Fellow and head of security architecture at Advanced Micro Devices Inc., and earlier in his career, as a senior manager and senior technical staff member at IBM's T.J. Watson Research Center.</div>
+			</td>
+		</tr>
+		
+		<tr>
+			<td><b>12:00 - 01:00 pm EST</b></td>
+			<td>
+			<div class="session-big-heading" id="session-2">Session 2: Clouds and Graphs&nbsp;</div>
+
+			<div class="session-chairs">Yiping Kang (University of Michigan)</div>
+			</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>
+			<div class="session-heading">Quantum Computing in the Cloud: Analyzing job and machine characteristics</div>
+
+			<div class="session-person">Gokul Subramanian Ravi, Kaitlin N. Smith (University of Chicago), Pranav Gokhale (Super.Tech), Frederic Chong (University of Chicago)</div>
+			<!-- <div class="session-link"><a class="video-link" href="video_pages/long_session2_paper1.html" target="body">video (long)</a> <a class="video-link" href="video_pages/short_session2_paper1.html" target="body">video (short)</a> <a class="paper-link" onclick="visit_paper('session2_paper1')">paper</a></div>
+			--></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td><img align="left" alt="" src="Open_Research.jpg" width="25" />
+			<div class="session-heading">Analyzing Tail Latency in Serverless Clouds with STeLLAR&middot;</div>
+
+			<div class="session-person">Dmitrii Ustiugov, Theodor Amariucai, Boris Grot (University of Edinburgh)</div>
+			<!-- <div class="session-link"><a class="video-link" href="video_pages/long_session2_paper2.html" target="body">video (long)</a> <a class="video-link" href="video_pages/short_session2_paper2.html" target="body">video (short)</a> <a class="paper-link" onclick="visit_paper('session2_paper2')">paper</a></div>
+			--></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>
+			<div class="session-heading">Cross Platform Performance Evaluation of Stateful Serverless Workloads</div>
+
+			<div class="session-person">Narges Shahidi, Jashwant Raj Gunasekaran, Mahmut Taylan Kandemir (The Pennsylvania State University)</div>
+			<!-- <div class="session-link"><a class="video-link" href="video_pages/long_session2_paper3.html" target="body">video (long)</a> <a class="video-link" href="video_pages/short_session2_paper3.html" target="body">video (short)</a> <a class="paper-link" onclick="visit_paper('session2_paper3')">paper</a></div>
+			--></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td><img align="left" alt="" src="Open_Research.jpg" width="25" />
+			<div class="session-heading">Characterizing and Mitigating the I/O Scalability Challenges for Serverless Applications</div>
+
+			<div class="session-person">Rohan Basu Roy, Tirthak Patel, Devesh Tiwari (Northeastern University)</div>
+			<!-- <div class="session-link"><a class="video-link" href="video_pages/long_session2_paper3.html" target="body">video (long)</a> <a class="video-link" href="video_pages/short_session2_paper3.html" target="body">video (short)</a> <a class="paper-link" onclick="visit_paper('session2_paper3')">paper</a></div>
+			--></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td><img align="left" alt="" src="Open_Research.jpg" width="25" />
+			<div class="session-heading">A Deep Dive Into Understanding The Random Walk-Based Temporal Graph Learning&middot;</div>
+
+			<div class="session-person">Nishil Talati, Di Jin, Haojie Ye (University of Michigan), Ajay Brahmakshatriya (Massachusetts Institute of Technology), Ganesh Dasika (AMD Research), Saman Amarasinghe (Massachusetts Institute of Technology), Trevor Mudge, Danai Koutra, Ronald Dreslinski (University of Michigan)</div>
+			<!-- <div class="session-link"><a class="video-link" href="video_pages/long_session2_paper4.html" target="body">video (long)</a> <a class="video-link" href="video_pages/short_session2_paper4.html" target="body">video (short)</a> <a class="paper-link" onclick="visit_paper('session2_paper4')">paper</a></div>
+			--></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>
+			<div class="session-heading">Locality Analysis of Graph Reordering Algorithms&nbsp;</div>
+
+			<div class="session-person">Mohsen Koohi Esfahani, Peter Kilpatrick, Hans Vandierendonck (Queen&#39;s University Belfast)</div>
+			<!-- <div class="session-link"><a class="video-link" href="video_pages/long_session2_paper5.html" target="body">video (long)</a> <a class="video-link" href="video_pages/short_session2_paper5.html" target="body">video (short)</a> <a class="paper-link" onclick="visit_paper('session2_paper5')">paper</a></div>
+			--></td>
+		</tr>
+	</tbody>
+</table>
+
+<div style="height: 20px;"></div>
+
+<table class="program-table">
+	<tbody>
+		<tr>
+			<th class="session-big-heading" colspan="2">Tuesday, November 9, 2021</th>
+		</tr>
+		<tr>
+			<td><b>10:00 - 10:50 am EST</b></td>
+			<td>
+			<div class="session-big-heading" id="session-3">Session 3: Programming, Debugging, and Errors&nbsp;</div>
+
+			<div class="session-chairs">Clayton Hughes (Sandia National Laboratories)</div>
+			</td>
+		</tr>
+		<tr>
+			<td style="width: 100px;"></td>
+			<td>
+			<div class="session-heading">Characterizing Soft Error Vulnerability of CPUs Across Compiler Optimizations and Microarchitectures</div>
+
+			<div class="session-person">George Papadimitriou, Dimitris Gizopoulos (University of Athens)</div>
+			<!-- <div class="session-link"><a class="video-link" href="video_pages/long_session3_paper1.html" target="body">video (long)</a> <a class="video-link" href="video_pages/short_session3_paper1.html" target="body">video (short)</a> <a class="paper-link" onclick="visit_paper('session3_paper1')">paper</a></div>
+			--></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>
+			<div class="session-heading">Boosting Microprocessor Efficiency: Circuit- and Workload-Aware Assessment of Timing Errors</div>
+
+			<div class="session-person">Ioannis Tsiokanos (Queen&#39;s University Belfast), George Papadimitriou, Dimitris Gizopoulos (University of Athens), Georgios Karakonstantis (Queen&#39;s University Belfast)</div>
+			<!-- <div class="session-link"><a class="video-link" href="video_pages/long_session3_paper2.html" target="body">video (long)</a> <a class="video-link" href="video_pages/short_session3_paper2.html" target="body">video (short)</a> <a class="paper-link" onclick="visit_paper('session3_paper2')">paper</a></div>
+			--></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td><img align="left" alt="" src="Open_Research.jpg" width="25" />
+			<div class="session-heading">GoAT: Automated Concurrency Analysis &nbsp;and Debugging Tool for Go&middot;</div>
+
+			<div class="session-person">Saeed Taheri, Ganesh Gopalakrishnan (University of Utah)</div>
+			<!-- <div class="session-link"><a class="video-link" href="video_pages/long_session3_paper3.html" target="body">video (long)</a> <a class="video-link" href="video_pages/short_session3_paper3.html" target="body">video (short)</a> <a class="paper-link" onclick="visit_paper('session3_paper3')">paper</a></div>
+			--></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>
+			<div class="session-heading">Quantifying the Semantic Gap Between Serial and Parallel Programming</div>
+
+			<div class="session-person">Xiaochun Zhang (Huawei), Timothy Jones (University of Cambridge), Simone Campanoni (Northwestern University)</div>
+			<!-- <div class="session-link"><a class="video-link" href="video_pages/long_session3_paper4.html" target="body">video (long)</a> <a class="video-link" href="video_pages/short_session3_paper4.html" target="body">video (short)</a> <a class="paper-link" onclick="visit_paper('session3_paper4')">paper</a></div>
+			--></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td><img align="left" alt="" src="Open_Research.jpg" width="25" />
+			<div class="session-heading">HotGauge: A Methodology for Characterizing Advanced Hotspots in Modern and Next Generation Processors&middot;</div>
+
+			<div class="session-person">Alexander Hankin, David Werner (Tufts University), Julien Sebot (Intel), Kaushik Vaidyanathan (Google), Maziar Amiraski, Mark Hempstead (Tufts University)</div>
+			<!-- <div class="session-link"><a class="video-link" href="video_pages/long_session3_paper5.html" target="body">video (long)</a> <a class="video-link" href="video_pages/short_session3_paper5.html" target="body">video (short)</a> <a class="paper-link" onclick="visit_paper('session3_paper5')">paper</a></div>
+			--></td>
+		</tr>
+		<tr>
+			<td rowspan="3"><b>10:55 - 11:55 am EST</b></td>
+			<td>
+			<div class="session-big-heading" id="keynote-2"><img align="left" alt="" src="Wu_2016 200x200.jpeg" width="75" /> Keynote 2: Scaling AI Sustainably: Environmental Implications, Challenges and Opportunities -- Carole-Jean Wu (Facebook AI Research)</div>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<div class="session-chair">Ravi Soundararajan (VMware)</div>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<div class="session-abstract">The past decade has witnessed orders-of-magnitude increase in the amount of compute for AI. Modern natural language processing models are fueled with over trillion parameters while the memory needs of deep learning recommendation and ranking models have grown from hundreds of gigabytes to the terabyte scale. We will explore the environmental implications of the super-linear growth trend for AI from a holistic perspective, spanning data, algorithms, and system hardware. I will talk about the carbon footprint of AI computing by examining the model development cycle across industry-scale use cases and, at the same time, considering the life cycle of system hardware. The talk will capture the operational and manufacturing carbon footprint of AI computing. I will present an end-to-end analysis for what and how hardware-software design and at-scale optimization can help reduce the overall carbon footprint of AI. Based on the industry experience and lessons learned, I will share the key challenges across the many dimensions of AI. This talk will conclude with important development and research directions to advance the field of AI in an environmentally-responsible and sustainable manner.</div>
+			
+			<div class="session-bio">Carole-Jean Wu is currently a Research Scientist and Manager at Facebook AI Research. Her research lies in the domain of computer architecture. Her work has included designing energy- and memory-efficient systems, building and optimizing systems for machine learning execution at-scale. She is passionate about pathfinding and tackling system challenges to enable efficient, responsible AI execution. Carole-Jean chairs the MLPerf Recommendation Benchmark Advisory Board, co-chaired MLPerf Inference, and serves on the MLCommons Board as a Director. Carole-Jean is a tenured Associate Professor at ASU. She receives her M.A. and Ph.D. from Princeton and B.Sc. from Cornell. She is the recipient of the NSF CAREER Award, Distinction of Honorable Mention of the CRA Anita Borg Early Career Award, the IEEE Young Engineer of the Year Award, the Science Foundation Arizona Bisgrove Early Career Scholarship, and the Intel PhD Fellowship, among a number of IEEE Micro Top Picks, IEEE Best Paper Awards.</div>
+			</td>
+		</tr>
+		<tr>
+			<td><b>12:05 - 12:55 pm EST</b></td>
+			<td>
+			<div class="session-big-heading" id="session-4">Session 4: GPU, and Machine Learning&nbsp;</div>
+
+			<div class="session-chairs">David Kaeli (Northeastern University)</div>
+			</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td><img align="left" alt="" src="Open_Research.jpg" width="25" />
+			<div class="session-heading">Cactus: Top-Down GPU-Compute Benchmarking using Real-Life Applications</div>
+
+			<div class="session-person">Mahmood Naderan-Tahan, Lieven Eeckhout (Ghent University)</div>
+			<!-- <div class="session-link"><a class="video-link" href="video_pages/long_session4_paper1.html" target="body">video (long)</a> <a class="video-link" href="video_pages/short_session4_paper1.html" target="body">video (short)</a> <a class="paper-link" onclick="visit_paper('session4_paper1')">paper</a></div>
+			--></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>
+			<div class="session-heading">Characterizing and Taming Resolution in Convolutional Neural Networks</div>
+
+			<div class="session-person">Eddie Yan, Liang Luo, Luis Ceze (University of Washington)</div>
+			<!-- <div class="session-link"><a class="video-link" href="video_pages/long_session4_paper2.html" target="body">video (long)</a> <a class="video-link" href="video_pages/short_session4_paper2.html" target="body">video (short)</a> <a class="paper-link" onclick="visit_paper('session4_paper2')">paper</a></div>
+			--></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td><img align="left" alt="" src="Open_Research.jpg" width="25" />
+			<div class="session-heading">STONNE: Enabling Cycle-Level Microarchitectural Simulation for DNN Inference Accelerators</div>
+
+			<div class="session-person">Francisco Munoz-Martinez (Universidad de Murcia), Jos&eacute; L. Abell&aacute;n (Universidad Cat&oacute;lica de Murcia), Manuel E. Acacio (Universidad de Murcia), Tushar Krishna (Georgia Institute of Technology)</div>
+			<!-- <div class="session-link"><a class="video-link" href="video_pages/long_session4_paper3.html" target="body">video (long)</a> <a class="video-link" href="video_pages/short_session4_paper3.html" target="body">video (short)</a> <a class="paper-link" onclick="visit_paper('session4_paper3')">paper</a></div>
+			--></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td><img align="left" alt="" src="Open_Research.jpg" width="25" />
+			<div class="session-heading">Characterizing and Demystifying the Implicit Convolution Algorithm on Commercial Matrix-Multiplication Accelerators</div>
+
+			<div class="session-person">Yangjie Zhou (Shanghai Jiao Tong University and Shanghai Qi Zhi Institute), Mengtian Yang (Shanghai Jiao Tong University), Cong Guo, Jingwen Leng (Shanghai Jiao Tong University and Shanghai Qi Zhi Institute), Yun Liang (Peking University and Shanghai Qi Zhi Institute), Quan Chen, Minyi Guo (Shanghai Jiao Tong University and Shanghai Qi Zhi Institute), Yuhao Zhu (University of Rochester)</div>
+			<!-- <div class="session-link"><a class="video-link" href="video_pages/long_session4_paper4.html" target="body">video (long)</a> <a class="video-link" href="video_pages/short_session4_paper4.html" target="body">video (short)</a> <a class="paper-link" onclick="visit_paper('session4_paper4')">paper</a></div>
+			--></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>
+			<div class="session-heading">Demystifying TensorRT: Characterizing Neural Network Inference Engine on Nvidia Edge Devices</div>
+
+			<div class="session-person">Omais Shafi, Chinmay Rai (IIT Delhi), Gayathri Ananthanarayanan (IIT Dharwad), Rijurekha Sen (IIT Delhi)</div>
+			<!-- <div class="session-link"><a class="video-link" href="video_pages/long_session4_paper5.html" target="body">video (long)</a> <a class="video-link" href="video_pages/short_session4_paper5.html" target="body">video (short)</a> <a class="paper-link" onclick="visit_paper('session4_paper5')">paper</a></div>
+			--></td>
+		</tr>
+		<tr>
+			<td><b>12:55 pm EST</b></td>
+			<td class="session-big-heading"><b>Closing Remarks &amp; Awards</b></td>
+		</tr>
+	</tbody>
+</table>
+
+<p style="margin-top: 0; margin-bottom: 0"></p>
+
+<p style="margin-top: 0; margin-bottom: 0"></p>
+
+<p style="margin-top: 0; margin-bottom: 0"></p>
+
+<p align="center"><span class="style9"><font size="4">Sponsored by:</font></span></p>
+
+<p align="center"><a href="http://www.ieee.org/index.html" target="_top"><img align="center" alt="" src="thumbnail_IEEEbig.png" width="175" /></a>&nbsp; &nbsp; <a href="http://www.computer.org/portal/web/guest/home" target="_top"><img align="center" alt="" src="IEEE_Comp_Soc.gif" width="180" /></a>&nbsp; &nbsp;<a href="http://www.vmware.com/" target="_blank"><img border="0" src="vmware.png" width="250" /></a>&nbsp; &nbsp;&nbsp; &nbsp;<a href="https://research.fb.com/" target="_blank"><img border="0" src="Facebook-06-2015-Blue.jpg" width="250" /></a></p>
+
+<p></p>
+
+<hr />
+<p></p>
+</body>
+</html>
